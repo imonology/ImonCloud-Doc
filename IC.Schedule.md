@@ -50,19 +50,21 @@ The callback function will be executed when this setTask is finished.
 
 
 # deleteTask({id: , onDone: });
+The deleted task will no longer be executed.
 
 # suspendTask({id: , onDone: });
+The suspended task will be not executed when condition is matched without deleting. 
 
 # resumeTask({id: , onDone: });
 
 # patchCallback({id: , action: , callback: });
-
+This function, patchCallback, patches(register) a callback function for a schedule task. Scheduled tasks will be stored in database but functions won't. When project server restarts, tasks will be reloaded but functions. So, to patch/register back is necessary when project server starts.
 
 # getStatus();
+To get IC.Schedule status
 
 # enable();
-
-
+To enable IC.Schedule
 
 # disable();
-
+To disable IC.Schedule
