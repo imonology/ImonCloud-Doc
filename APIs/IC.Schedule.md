@@ -1,59 +1,61 @@
-# IC.Schedule.setTask({id: , callback: , monthday: , weekday: , hour:, minute:, cycle: argument:, action: , suspend: , descritpion: , onDone: });
+# IC.Schedule
+
+## setTask({id: , callback: , monthday: , weekday: , hour:, minute:, cycle: argument:, action: , suspend: , descritpion: , onDone: });
 
 This function adds/sets a task in to database. When conditions are matched, the callback function will be executed.
 
-## input
+### input
 
-### id: task ID
+#### id: task ID
 
 If the id does not exist, a new task will be added. 
 If the id exists, the function sets a existing task.
 
-### callback:
+#### callback:
 
 When condition matching, the callback function will be executed.
 
-### monthday: 
+#### monthday: 
 
 1 to 31
 
-### weekday:
+#### weekday:
 
 Monday, Tuesday, Wednesday, Thursday, Friday, and Sunday (lower case please)
 
-### hour:
+#### hour:
 
 0 to 23
 
-### minute:
+#### minute:
 
 0 to 59
 
-### cycle:
+#### cycle:
 
 supported: hourly, daily, weekly, monthly
 
-### argument: 
+#### argument: 
 
 The argument will be the input for callback function.
 
-### action:
+#### action:
 
 The action should be the callback name which is expected to execute. 
 
-### suspend:
+#### suspend:
 
 Without delete, this task will not be executed when condition is matched.
 
-### description:
+#### description:
 
 You can give some descriptions for this task.
 
-### onDone: callback function
+#### onDone: callback function
 
 The callback function will be executed when this setTask is finished.
 
-## Output
+### Output
 
 {scheduleId: , message: }
 
@@ -61,30 +63,30 @@ The callback function will be executed when this setTask is finished.
 * message: 
 
 
-# deleteTask({id: , onDone: });
+## deleteTask({id: , onDone: });
 
 The deleted task will be removed from database and will no longer be executed. 
 
-# suspendTask({id: , onDone: });
+## suspendTask({id: , onDone: });
 
 The suspended task will be not executed when condition is matched without deleting. 
 
-# resumeTask({id: , onDone: });
+## resumeTask({id: , onDone: });
 
 The function resumeTask resumes a suspended task.
 
-# patchCallback({id: , action: , callback: });
+## patchCallback({id: , action: , callback: });
 
 This function, patchCallback, patches/register a callback function for a scheduled task. Scheduled tasks will be stored in database but functions will be not. When project server restarts, tasks will be reloaded but their functions. So, to patch/register back is necessary when project server restarts.
 
-# getStatus();
+## getStatus();
 
 To get IC.Schedule status
 
-# enable();
+## enable();
 
 To enable IC.Schedule
 
-# disable();
+## disable();
 
 To disable IC.Schedule
