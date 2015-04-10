@@ -1,27 +1,52 @@
 # IC.Video
 
-getStreamingQueues
-setDiskFullAction
-setNotify
-preserve
-registerNotifyCallback
-setChannel
-getChannel
+IC.Video supports to download video stream from rtsp by ffmpeg. 
+
+
+
+## setChannel
+
+
+
+## getChannel
+
+
+## deleteChannel
+
+
+## getStatus
+
+## stdinWrite
+
+## query
+
+
+## record 
+
+## stream 
+
+## stopAllStream
+
+## stored
+
+
+## getStreamingQueues
+## setDiskFullAction
+## setNotify
+## preserve
+## registerNotifyCallback
+
 reloadChannelCache
-deleteChannel
-getStatus
+
 setCaptionText = function(data)
-stdinWrite
+
 queryStored
 queryLive
-query
+
 setCaptionText
 getCaptionText
 getOldestSearchable
-record 
-stream 
-stopAllStream
-stored
+
 daemon
 debug
 
