@@ -1,5 +1,7 @@
 # IC.Standalone
-This API will not depend other *.js, so it can run independently.
+
+Implementation of this API do not depend on other *.js files as well as external packages, so this API can be run independently.
+This API depends only Node.js APIs or packages in bare Node.js.
 The API also supports multiple platforms as compatible as possible.
 Mocha also covers functions in the API.
 
@@ -15,7 +17,7 @@ Just put a callback function named onDone to receive returned results.
 
 ### Output
 
-{err: , disk}
+{err: , disk: }
 
 The returned results will be an object with two items, err and disk.
 
@@ -25,7 +27,13 @@ Your can use disk information if no error occurs.
 
 ## whichPartition({path: , onDone: });
 
-This function returns
+When give a existing path, this function returns corresponding partition by onDone callback function.
+
+### Input
+
+path: 
+
+### output
 
 ## is enoughDiskSpace();
 
